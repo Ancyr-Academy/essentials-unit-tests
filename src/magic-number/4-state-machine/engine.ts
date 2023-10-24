@@ -28,7 +28,7 @@ export class Engine {
     }
   }
 
-  isNotFinished() {
-    return this.state !== State.Finished;
+  isFinished() {
+    return this.state === State.Finished;
   }
 }

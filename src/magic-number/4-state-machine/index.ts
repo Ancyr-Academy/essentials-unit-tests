@@ -11,7 +11,7 @@ async function magicNumber() {
 
   const engine = new Engine(magicNumber);
 
-  while (engine.isNotFinished()) {
+  while (!engine.isFinished()) {
     const { number } = await prompt.get(['number ']);
     userNumber = parseInt(number as string, 10);
 
