@@ -48,7 +48,7 @@ describe('passing a number that is too small', () => {
 describe('playing when the game is finished', () => {
   it('should throw an error', () => {
     let engine = new Engine(50);
-    let result = engine.check(50);
+    engine.check(50);
 
     expect(() => engine.check(50)).toThrowError('Game is finished');
   });

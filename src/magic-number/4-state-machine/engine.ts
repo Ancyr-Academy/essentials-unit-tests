@@ -8,6 +8,7 @@ export enum Result {
   TooSmall = 'too-small',
   Win = 'win',
 }
+
 export class Engine {
   private state: State = State.Started;
 

@@ -3,7 +3,6 @@ import { Engine, Result } from './engine.ts';
 
 async function magicNumber() {
   prompt.start();
-
   console.log('Bienvenue dans le jeu du nombre magique !');
 
   const magicNumber = Math.floor(Math.random() * 100) + 1;
