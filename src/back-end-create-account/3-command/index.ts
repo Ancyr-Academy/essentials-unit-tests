@@ -36,6 +36,11 @@ class FileSystemDatabase {
   }
 }
 
+const createAccountSchema = z.object({
+  emailAddress: z.string().email(),
+  password: z.string().min(8),
+});
+
 export class CreateAccountCommand {
   constructor(private readonly database: FileSystemDatabase) {}
 
@@ -67,11 +72,6 @@ export class CreateAccountCommand {
 }
 
 const fastify = Fastify({ logger: true });
-
-const createAccountSchema = z.object({
-  emailAddress: z.string().email(),
-  password: z.string().min(8),
-});
 
 fastify.post('/account', async (request: any, reply) => {
   const command = new CreateAccountCommand(new FileSystemDatabase());
