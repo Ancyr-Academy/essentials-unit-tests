@@ -64,7 +64,6 @@ fastify.post('/account', async (request: any, reply) => {
 
   database.insert(account);
   reply.code(200).send(account);
-  return;
 });
 
 startServer(fastify);

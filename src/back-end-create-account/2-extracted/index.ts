@@ -66,7 +66,7 @@ export function createAccount(body: any) {
   database.insert(account);
   return {
     type: 'success',
-    account: account,
+    account,
   };
 }
 
